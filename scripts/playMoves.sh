@@ -36,8 +36,7 @@ cast send --rpc-url $RPC_URL --private-key $PRIVATE_KEY $CONTRACT_ADDRESS "playM
 
 # Print game state
 if [ "$printLogs" = true ] ; then
-    echo "Print state of game number: $gameNumber"
-    cast call --rpc-url $RPC_URL $CONTRACT_ADDRESS "printGameState(uint256) ()" $gameNumber > /dev/null
+    ./scripts/printGameState.sh
 fi
 echo "------------------------------------"
 
@@ -49,8 +48,7 @@ cast send --rpc-url $RPC_URL --private-key $PRIVATE_KEY $CONTRACT_ADDRESS "playM
 
 # Print game state
 if [ "$printLogs" = true ] ; then
-    echo "Print state of game number: $gameNumber"
-    cast call --rpc-url $RPC_URL $CONTRACT_ADDRESS "printGameState(uint256) ()" $gameNumber > /dev/null
+    ./scripts/printGameState.sh
 fi
 echo "------------------------------------"
 
@@ -62,7 +60,6 @@ cast send --rpc-url $RPC_URL --private-key $PRIVATE_KEY $CONTRACT_ADDRESS "playM
 
 # Print game state
 if [ "$printLogs" = true ] ; then
-    echo "Print state of game number: $gameNumber"
-    cast call --rpc-url $RPC_URL $CONTRACT_ADDRESS "printGameState(uint256) ()" $gameNumber > /dev/null
+    ./scripts/printGameState.sh
 fi
 echo "------------------------------------"

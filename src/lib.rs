@@ -85,6 +85,22 @@ impl StylusChess {
         Ok(player_address)
     }
 
+    /// Get the status of the game game_number
+    pub fn get_game_status(&self, game_number: U256) -> Result<U8, Vec<u8>> {
+        let game_info = self.games.get(game_number);
+        let game_status = game_info.game_status.get();
+
+        Ok(U8::from(game_status))
+    }
+
+    /// Get the victor of the game game_number
+    pub fn get_victor(&self, game_number: U256) -> Result<U8, Vec<u8>> {
+        let game_info = self.games.get(game_number);
+        let victor = game_info.victor.get();
+
+        Ok(U8::from(victor))
+    }
+
     /// Play a Move
     pub fn play_move(
         &mut self,

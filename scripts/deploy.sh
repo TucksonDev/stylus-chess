@@ -12,9 +12,9 @@ set +o allexport
 # -------------- #
 # Initial checks #
 # -------------- #
-if [ -z "$PRIVATE_KEY" ] || [ -z "$ADDRESS" ]
+if [ -z "$PRIVATE_KEY" ]
 then
-    echo "You need to provide the PRIVATE_KEY and the ADDRESS of the deployer"
+    echo "You need to provide the PRIVATE_KEY of the deployer"
     exit 0
 fi
 
